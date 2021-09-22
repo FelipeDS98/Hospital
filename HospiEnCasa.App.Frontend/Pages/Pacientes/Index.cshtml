@@ -1,0 +1,24 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.Pacientes.IndexModel
+@{
+    ViewData["Title"] = "Pacientes";
+}
+
+<div class="container">
+    @foreach (var paciente in Model.pacientes)
+    {
+        <div class="row">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@paciente.Nombre @paciente.Apellidos</h5>
+                    <hr>
+                    <p class="cart-text"><span style="font-weight: 500;">Teléfono: </span>@paciente.NumeroTelefono</p>
+                    <p class="cart-text"><span style="font-weight: 500;">Género: </span>@paciente.Genero</p>
+                    <p class="cart-text"><span style="font-weight: 500;">Ciudad: </span>@paciente.Ciudad</p>
+                    <p class="cart-text"><span style="font-weight: 500;">Fecha de Nacimiento: </span>@paciente.FechaNacimiento.ToString("dd/M/yyyy" , System.Globalization.CultureInfo.CreateSpecificCulture("es-ES"))</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+

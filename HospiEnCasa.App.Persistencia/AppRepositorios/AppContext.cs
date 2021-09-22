@@ -25,7 +25,7 @@ namespace HospiEnCasa.App.Persistencia
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=FELIPE;Database=Hospital;User ID=FELIPE;Password=123;Trusted_Connection=false;MultipleActiveResultSets=true");
+                optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB; Initial Catalog=Hospital");
             }
 
         }

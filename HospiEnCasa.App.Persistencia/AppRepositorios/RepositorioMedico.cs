@@ -6,13 +6,7 @@ namespace HospiEnCasa.App.Persistencia
 {
     public class RepositorioMedico : IRepositorioMedico
     {
-        private readonly AppContext _appContext;
-
-        public RepositorioMedico(AppContext appContext)
-        {
-            _appContext = appContext;
-        }
-        
+        private readonly AppContext _appContext = new AppContext();
         IEnumerable<Medico> IRepositorioMedico.GetAllMedicos()
         {
             return _appContext.Medicos;

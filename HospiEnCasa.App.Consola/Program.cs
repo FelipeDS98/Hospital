@@ -7,20 +7,14 @@ namespace HospiEnCasa.App.Consola
     class Program
     {
 
-        private static IRepositorioPaciente _repoPaciente = new RepositorioPaciente(new Persistencia.AppContext());
-        private static IRepositorioMedico _repoMedico = new RepositorioMedico(new Persistencia.AppContext());
+        private static IRepositorioPaciente _repoPaciente = new RepositorioPaciente();
+        private static IRepositorioMedico _repoMedico = new RepositorioMedico();
 
         static void Main(string[] args)
         {
-            Console.Write("Write something: ");
-
-            string message = Console.ReadLine();
-
-            Console.WriteLine(message);
-            
-
+            Console.WriteLine("Working");
             // AddPaciente();
-            // BuscarPaciente(1);
+            BuscarPaciente(1);
             // AddMedico();
             // AsignarMedico();
         }
